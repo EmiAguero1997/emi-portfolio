@@ -14,6 +14,7 @@
   padding: 80px;
   gap: 64px;
   font-family: var(--font-geist-sans);
+  background-color: #383838;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -103,6 +104,14 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
+}
+.header{
+  background-color: white;
+}
+
+.navbar{
+  background-color: #1a1a1a!important;
+  
 }
 
 /* Enable hover only on non-touch devices */
