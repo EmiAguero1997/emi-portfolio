@@ -9,10 +9,10 @@ import { Button } from "react-bootstrap";
 
 export default function Home() {
   return (
-    <>
-
+    
+      
       <div className={styles.mainContainer}>
-        <AppNavbar></AppNavbar>
+      <AppNavbar></AppNavbar>
         <div className={`container d-grid ${styles.gridContainer}`}>
           <div className="row mb-4 mt-4">
             <div className="col-12 col-lg-4 col-md-6">
@@ -40,11 +40,14 @@ export default function Home() {
                 alt="Picture of the author"></Image>
             </div>
           </div>
-        </div>
-        <footer className={`mt-4 text-center ${styles.footer}`}>
+          <div className="row">
+          
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum id molestias expedita facere molestiae cumque praesentium dolores vel incidunt a autem sequi numquam deserunt velit non quis, eveniet veritatis consectetur?
-        </footer>
+        
+          </div>
+        </div>
+        
       </div>
-    </>
+    
   );
 }
