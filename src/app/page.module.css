@@ -106,7 +106,22 @@ a.secondary {
   flex-shrink: 0;
 }
 .gridContainer{
-  margin-top: 25%;
+  margin-top: 10%;
+}
+
+.profileImg{
+  border-radius: 10%;
+}
+
+.mainContainer{
+  background-color: #383838!important;
+  color: white;
+  min-height: 100svh;
+  font-family: var(--font-roboto-mono);
+}
+
+.authorName{
+  color:aquamarine
 }
 
 /* Enable hover only on non-touch devices */
