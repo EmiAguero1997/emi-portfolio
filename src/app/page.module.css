@@ -101,17 +101,24 @@ a.secondary {
 
 .profileImg{
   border-radius: 10%;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.8));
 }
 
 .mainContainer{
+  display: grid;
   background-color: #383838!important;
   color: white;
-  min-height: 100svh;
-  height:100svh;
+  min-height: 100dvh;
   font-family: var(--font-roboto-mono);
+  grid-template-rows: auto 1fr auto;
 }
 
 .authorName{
   color:aquamarine
 }
 
+@media (width <= 767px){
+  .profileImg{
+    margin-top: 10%;
+  }
+}

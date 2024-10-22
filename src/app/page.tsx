@@ -1,18 +1,20 @@
 
 import styles from "./page.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import AppNavbar from "./components/navbar";
+// import AppNavbar from "./components/navbar";
 // import Image from 'react-bootstrap/Image';
 import Image from "next/image";
 import fotoCv from './assets/foto-cv.jpg';
 import { Button } from "react-bootstrap";
 
 export default function Home() {
+
+  
   return (
     
       
       <div className={styles.mainContainer}>
-      <AppNavbar></AppNavbar>
+      {/* <AppNavbar></AppNavbar> */}
         <div className={`container d-grid ${styles.gridContainer}`}>
           <div className="row mb-4 mt-4">
             <div className="col-12 col-lg-4 col-md-6">
@@ -34,8 +36,8 @@ export default function Home() {
             </div>
             <div className="col-12 col-lg-6 col-md-6 d-flex justify-content-center align-content-center">
               <Image src={fotoCv} className={styles.profileImg}
-                width={400}
-                height={300}
+                width={350}
+                height={250}
                 quality={100}
                 alt="Picture of the author"></Image>
             </div>
