@@ -113,12 +113,42 @@ a.secondary {
   grid-template-rows: auto 1fr auto;
 }
 
+.colContainer{
+  display: grid;
+  row-gap: 10px;
+}
+
 .authorName{
   color:aquamarine
 }
+
+.smallText{
+  font-size: medium;
+}
+
 
 @media (width <= 767px){
   .profileImg{
     margin-top: 10%;
   }
+
+  .gridContainer{
+    gap: 2% !important;;
+  }
+  
+}
+
+@media (width <= 450px){
+  .smallText{
+    font-size: x-small;
+  }
+
+  .gridContainer{
+    gap: 2% !important;;
+  }
+
+  .smallText{
+    font-size: x-small;
+  }
+  
 }

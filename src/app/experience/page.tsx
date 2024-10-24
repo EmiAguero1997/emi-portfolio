@@ -1,7 +1,138 @@
-export default function Experience(){
-    return(
-        <>
-        <h1>Experience</h1>
-        </>
+import Link from 'next/link';
+import styles from '../page.module.css';
+
+export default function Experience() {
+    interface ExperienceItem {
+        name: string;
+        description: string;
+      }
+      
+      interface Experience {
+        enterpriseName: string;
+        period: string;
+        description: ExperienceItem[];
+        sites?: string[]; // Optional property as it's not present in every experience
+      }
+      
+      const experience: Experience[] = [
+        {
+          enterpriseName: 'Moby Digital',
+          period: 'May 2023 - Present',
+          description: [
+            {
+              name: 'Investment Funds',
+              description: 'I developed screens and business logic for the investment funds section, benefiting thousands of direct users.'
+            },
+            {
+              name: 'Payments Module Refactoring',
+              description: 'I carried out redesigns and refactoring in the payments module of the application, handling highly complex code. These improvements optimized user interaction with the platform, increasing efficiency and user experience.'
+            },
+            {
+              name: 'Migration of Travel Notifications Functionality',
+              description: 'I participated in the development and migration of the travel notifications feature, enabling users to activate the use of their cards abroad, improving their experience.'
+            }
+          ]
+        },
+        {
+          enterpriseName: 'Folcode',
+          period: 'July 2021 – May 2023',
+          description: [
+            {
+              name: 'UI Implementation and Business Logic Development',
+              description: 'Implemented user interface designs and developed business logic requirements for each frontend view.'
+            },
+            {
+              name: 'Collaborative IT Development',
+              description: 'Worked alongside other IT members to plan, design, and develop efficient and scalable solutions.'
+            },
+            {
+              name: 'Customer-Focused Software Design',
+              description: 'Designed and developed software that met client needs, ensuring high-quality delivery.'
+            },
+            {
+              name: 'Unit Testing, API Integration, and Bug Fixing',
+              description: 'Conducted unit tests, handled REST API development, and fixed bugs to ensure smooth functionality.'
+            },
+            {
+              name: 'Database Analysis and Redesign',
+              description: 'Analyzed and redesigned a database to align with the specific project requirements.'
+            },
+            {
+              name: 'Endpoint Development',
+              description: 'Developed API endpoints for consumption in the frontend, enhancing data flow and user experience.'
+            }
+          ],
+          sites: [
+            'https://elegibiencompramejor.gob.ar/landing',
+            'https://capacitur.sanjuan.tur.ar',
+            'https://plataforma.sanjuan.tur.ar',
+            'https://sanjuanresponsable.sanjuan.gob.ar',
+            'https://plataforma.sanjuan.tur.ar',
+            'https://servicios.inversionessanjuan.gov.ar'
+          ]
+        }
+      ];
+    return (
+        <div className={styles.mainContainer}>
+
+
+
+            <div className={`container d-grid ${styles.gridContainer}`}>
+                <h1 className='mt-4'>Experience</h1>
+                {
+                    experience.map((item, index) => (
+                        <div className="row mt-4" key={index}>
+                            <div className={`col-12`}>
+                                <div className={styles.colContainer}>
+                                    <h1 className={styles.authorName}>{item.enterpriseName}</h1>
+                                    <h4>{item.period}</h4>
+                                    <div>
+                                        {
+                                            item.description.map((subItem, subIndex) => (
+                                                <ul key={subIndex}>
+                                                    <li>
+
+                                                        <h5 className={`${styles.authorName} ${styles.smallText}`}>{subItem.name}:</h5> <p className={styles.smallText}>{subItem.description}</p>
+
+
+                                                    </li>
+
+                                                </ul>
+                                            ))
+                                        }
+
+                                    </div>
+                                    {
+                                        item.sites && (
+                                            <h4>Sites</h4>
+                                            
+                                        )
+                                        
+                                    }
+                                    {
+                                    item.sites && (
+                                        item.sites.map((siteItem, siteIndex)=>(
+                                            
+                                            <ul key={siteIndex}>
+                                                <li>
+                                                    <Link className={`${styles.authorName} ${styles.smallText}`} href={siteItem}>{siteItem}</Link>
+                                                </li>
+                                            </ul>
+                                        ))
+                                    )
+                                }
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    ))
+                }
+
+
+            </div>
+        </div>
+
     )
 }
