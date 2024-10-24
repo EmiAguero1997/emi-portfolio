@@ -8,7 +8,7 @@ import fotoCv from './assets/foto-cv.jpg';
 import { Button } from "react-bootstrap";
 
 export default function Home() {
-
+  const aboutMe = "A persistent and focused Frontend Developer with experience in object-oriented programming and web development using Angular TS, React/NextJs, Git, Bitbucket, HTML, CSS, and other related technologies. Proficient in Agile/Scrum methodologies, API integration, and deployment. Skilled in developing efficient solutions to meet client needs. Fluent in English."
   
   return (
     
@@ -44,7 +44,9 @@ export default function Home() {
           </div>
           <div className="row">
           
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum id molestias expedita facere molestiae cumque praesentium dolores vel incidunt a autem sequi numquam deserunt velit non quis, eveniet veritatis consectetur?
+            <div className="col-auto">
+              <span>{aboutMe}</span>
+            </div>
         
           </div>
         </div>

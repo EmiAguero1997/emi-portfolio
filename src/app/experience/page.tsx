@@ -115,7 +115,7 @@ export default function Experience() {
                                             
                                             <ul key={siteIndex}>
                                                 <li>
-                                                    <Link className={`${styles.authorName} ${styles.smallText}`} href={siteItem}>{siteItem}</Link>
+                                                    <Link className={`${styles.authorName} ${styles.smallText}`} href={siteItem} target='_blank'>{siteItem}</Link>
                                                 </li>
                                             </ul>
                                         ))
