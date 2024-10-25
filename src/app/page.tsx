@@ -13,6 +13,7 @@ import linkedinLogo from '/public/linkedinLogo.svg';
 import downloadIcon from '/public/downloadIcon.svg';
 
 export default function Home() {
+  const linkedinUrl = 'https://www.linkedin.com/in/aguero-emiliano';
   const aboutMe = "A persistent and focused Frontend Developer with experience in object-oriented programming and web development using Angular TS, React/NextJs, Git, Bitbucket, HTML, CSS, and other related technologies. Proficient in Agile/Scrum methodologies, API integration, and deployment. Skilled in developing efficient solutions to meet client needs. Fluent in English."
 
   return (
@@ -74,10 +75,13 @@ export default function Home() {
                 </motion.a>
               </div>
               <div className="col-auto">
-                <motion.a whileHover={{ scale: 1.1 }}
+                <motion.div whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}>
+                <motion.a href={linkedinUrl} target="_blank">
                   <Image src={linkedinLogo} width={50} height={50} alt="linkedinLogo" className="mt-4"></Image>
                 </motion.a>
+                </motion.div>
+                
               </div>
             </div>
             <div className="mt-4">
