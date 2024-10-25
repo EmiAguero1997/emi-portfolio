@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import AppNavbar from "./components/navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import styles from './page.module.css';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${robotoMono.variable}`}>
+      <div className={styles.backgroundContainer}></div>
         <AppNavbar/>
         {children}
       </body>

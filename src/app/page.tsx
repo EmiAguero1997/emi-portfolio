@@ -13,6 +13,7 @@ export default function Home() {
 
 
     <div className={styles.mainContainer}>
+
       <div className={`container d-grid ${styles.gridContainer}`}>
         <div className="row mb-4 mt-4">
           <div className="col-12 col-lg-4 col-md-6">
@@ -28,12 +29,17 @@ export default function Home() {
             <p>Frontend Developer.</p>
             <h1>Hello, i am</h1>
             <h1 className={styles.authorName}>Emiliano Agüero</h1>
-            <motion.button whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }} className="btn btn-secondary btn-lg mt-4">
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              href="/CV.docx"
+              download="CV.docx"
+              className="btn btn-secondary btn-lg mt-4"
+            >
               Download CV
-            </motion.button>
+            </motion.a>
           </motion.div>
-          
+
           <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }} className="col-12 col-lg-6 col-md-6 d-flex justify-content-center align-content-center">
             <Image src={fotoCv} className={styles.profileImg}
               width={350}

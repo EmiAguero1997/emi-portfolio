@@ -124,6 +124,45 @@ a.secondary {
   font-size: medium;
 }
 
+.backgroundContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1; /* Keep behind all content */
+  background: none; /* Clear background to use pseudo-elements for animated bubbles */
+}
+
+.backgroundContainer::before,
+.backgroundContainer::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 20%, rgba(173, 216, 230, 0.3), transparent 10%), /* Light blue */
+              radial-gradient(circle at 80% 30%, rgba(255, 182, 193, 0.3), transparent 15%), /* Light pink */
+              radial-gradient(circle at 50% 80%, rgba(144, 238, 144, 0.3), transparent 20%); /* Light green */
+  animation: floatBackground 15s linear infinite alternate;
+  transform: translate(0, 0);
+}
+
+/* Adding another layer for depth */
+.backgroundContainer::after {
+  animation: floatBackground 15s linear infinite alternate-reverse;
+  opacity: 0.7;
+}
+
+@keyframes floatBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-25%, -25%);
+  }
+}
+
 
 @media (width <= 767px){
   .profileImg{
