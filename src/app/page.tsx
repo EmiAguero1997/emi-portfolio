@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import Image from 'react-bootstrap/Image';
 import Image from "next/image";
 import fotoCv from './assets/foto-cv.jpg';
+import reactLogo from '/public/reactLogo.svg';
 
 export default function Home() {
   const aboutMe = "A persistent and focused Frontend Developer with experience in object-oriented programming and web development using Angular TS, React/NextJs, Git, Bitbucket, HTML, CSS, and other related technologies. Proficient in Agile/Scrum methodologies, API integration, and deployment. Skilled in developing efficient solutions to meet client needs. Fluent in English."
@@ -15,16 +16,38 @@ export default function Home() {
     <div className={styles.mainContainer}>
 
       <div className={`container d-grid ${styles.gridContainer}`}>
-        <div className="row mb-4 mt-4">
-          <div className="col-12 col-lg-4 col-md-6">
+        <div className="row mb-4 mt-4 justify-content-between">
+          <div className="col-12 col-lg-6 col-md-6">
 
             <motion.div initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="d-flex align-content-center">
               <h1>Emiliano.</h1>
             </motion.div>
 
           </div>
+          <div className="col-12 col-lg-6 col-md-6">
+            <motion.div initial={{ x: 1000, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="d-flex align-content-center justify-content-center">
+              <h1>Tecnologies</h1>
+            </motion.div>
+            <motion.div>
+              <div className="row justify-content-center">
+                <div className="col-auto">
+                  <Image src={reactLogo} width={50} height={50} quality={100} alt="reactLogo"></Image>
+                </div>
+                <div className="col-auto">
+                  <Image src={reactLogo} width={50} height={50} quality={100} alt="reactLogo"></Image>
+                </div>
+                <div className="col-auto">
+                  <Image src={reactLogo} width={50} height={50} quality={100} alt="reactLogo"></Image>
+                </div>
+              </div>
+
+
+
+            </motion.div>
+
+          </div>
         </div>
-        <div className="row mt-4">
+        <div className="row mt-4 justify-content-between">
           <motion.div initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5 }} className="col-12 col-lg-6 col-md-6">
             <p>Frontend Developer.</p>
             <h1>Hello, i am</h1>
