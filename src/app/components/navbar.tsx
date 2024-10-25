@@ -1,9 +1,10 @@
 "use client"
 import { useRouter } from 'next/navigation';
-import { NavDropdown } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+
+
 export default function AppNavbar() {
   const router = useRouter();
 
@@ -20,14 +21,14 @@ export default function AppNavbar() {
     //     </Nav>
     //   </Container>
     // </Navbar>
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className='d-fixed'>
       <Container>
         <Navbar.Brand onClick={() => goRoute('/')}>Emiliano</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={() => goRoute('/experience')}>Experience</Nav.Link>
-            <NavDropdown title="Social Media" id="basic-nav-dropdown">
+            {/* <NavDropdown title="Social Media" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Another action
@@ -37,7 +38,10 @@ export default function AppNavbar() {
               <NavDropdown.Item href="#action/3.4">
                 Separated link
               </NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
+            
+            
+            
           </Nav>
         </Navbar.Collapse>
       </Container>

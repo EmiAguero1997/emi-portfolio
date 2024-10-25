@@ -13,12 +13,14 @@ export default function Experience() {
     period: string;
     description: ExperienceItem[];
     sites?: string[]; // Optional property as it's not present in every experience
+    subDesc?:string;
   }
 
   const experience: Experience[] = [
     {
       enterpriseName: 'Moby Digital',
       period: 'May 2023 - Present',
+      subDesc:'ICBC Mobile Banking',
       description: [
         {
           name: 'Investment Funds',
@@ -87,6 +89,11 @@ export default function Experience() {
                 <div className={styles.colContainer}>
                   <motion.h1 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1 }} className={styles.authorName}>{item.enterpriseName}</motion.h1>
                   <motion.h4 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1 }}>{item.period}</motion.h4>
+                  {
+                    item.subDesc && (
+                      <motion.h4 initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1 }} className={styles.authorName}>{item.subDesc}</motion.h4>
+                    )
+                  }
                   <motion.div initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 1.5 }}>
                     {
                       item.description.map((subItem, subIndex) => (
