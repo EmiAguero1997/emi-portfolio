@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(#0f3a4c,rgb(67, 112, 103))!important;
   --foreground: #171717;
 }
 
@@ -15,7 +15,7 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   max-height: 100vh;
-  background-color: #383838!important;
+  background-color: linear-gradient(#343434,aquamarine) ;
 }
 
 body {
