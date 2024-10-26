@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import AppNavbar from "./components/navbar";
 // import Image from 'react-bootstrap/Image';
 import Image from "next/image";
-import fotoCv from './assets/foto-cv.jpg';
+import fotoCv from '/public/noBgPhoto.png';
 import reactLogo from '/public/reactLogo.svg';
 import angularLogo from '/public/angularLogo.svg';
 import nodejsLogo from '/public/nodejsLogo.svg';
@@ -26,7 +26,7 @@ export default function Home() {
           <div className="col-12 col-lg-6 col-md-6">
 
             <motion.div initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} className="d-flex align-content-center">
-              <h1>Emiliano.</h1>
+              <h1>Emiliano</h1><h1 className={styles.authorName}>.</h1>
             </motion.div>
 
           </div>
@@ -60,8 +60,8 @@ export default function Home() {
         <div className="row mt-4 justify-content-between">
           <motion.div initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5 }} className="order-2 order-lg-1 order-md-1 col-12 col-lg-6 col-md-6">
             <p>Frontend Developer.</p>
-            <h1>Hello, i am</h1>
-            <h1 className={styles.authorName}>Emiliano Agüero</h1>
+            <h1 className={styles.bigTitle}>Hello, i am</h1>
+            <h1 className={`${styles.authorName} ${styles.bigTitle}`}>Emiliano Agüero</h1>
             <div className="row g-5">
               <div className="col-auto">
                 <motion.a
@@ -77,15 +77,15 @@ export default function Home() {
               <div className="col-auto">
                 <motion.div whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}>
-                <motion.a href={linkedinUrl} target="_blank">
-                  <Image src={linkedinLogo} width={50} height={50} alt="linkedinLogo" className="mt-4"></Image>
-                </motion.a>
+                  <motion.a href={linkedinUrl} target="_blank">
+                    <Image src={linkedinLogo} width={50} height={50} alt="linkedinLogo" className="mt-4"></Image>
+                  </motion.a>
                 </motion.div>
-                
+
               </div>
             </div>
             <div className="mt-4">
-              <span>{aboutMe}</span>
+              <span className={styles.smallText}>{aboutMe}</span>
             </div>
 
 
@@ -94,13 +94,50 @@ export default function Home() {
 
           </motion.div>
 
-          <motion.div initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 1 }} className="order-1 order-lg-2 order-md-2 col-12 col-lg-6 col-md-6 d-flex justify-content-center align-items-center mb-4">
-            <Image src={fotoCv} className={styles.profileImg}
-              width={350}
-              height={250}
-              quality={100}
-              alt="Picture of the author"></Image>
-          </motion.div>
+          <motion.div
+  initial={{ y: -100, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  transition={{ delay: 1 }}
+  className="order-1 order-lg-2 order-md-2 col-12 col-lg-6 col-md-6 d-flex justify-content-center align-items-center mb-4"
+>
+  <div className={styles.imageContainer}>
+    <Image
+      src={fotoCv}
+      className={styles.profileImg}
+      priority
+      width={350}
+      height={350}
+      quality={100}
+      alt="Picture of the author"
+    />
+    <motion.svg
+      fill="transparent"
+      viewBox="0 0 506 506"
+      className={styles.circle}
+    >
+      <motion.circle
+        cx={253}
+        cy={253}
+        r={250}
+        stroke="#7fffd4"
+        strokeWidth={4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        initial={{strokeDasharray: "24 10 0 0"}}
+        animate={{
+          strokeDasharray:["15 120 25 25", "16 25 92 72", "4 250 22 22"],
+          rotate:[120,360]
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: 'reverse'
+        }}
+      />
+    </motion.svg>
+  </div>
+</motion.div>
+          
         </div>
 
       </div>

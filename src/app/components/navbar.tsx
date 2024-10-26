@@ -3,6 +3,7 @@ import { useRouter } from 'next/navigation';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import styles from '../page.module.css'
 
 
 export default function AppNavbar() {
@@ -21,7 +22,7 @@ export default function AppNavbar() {
     //     </Nav>
     //   </Container>
     // </Navbar>
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className='d-fixed'>
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className={styles.navbar}>
       <Container>
         <Navbar.Brand onClick={() => goRoute('/')}>Emiliano</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
