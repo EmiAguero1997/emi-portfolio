@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import AppNavbar from "./components/navbar";
 // import Image from 'react-bootstrap/Image';
 import Image from "next/image";
-import fotoCv from '/public/noBgPhoto.png';
+import fotoCv from '/public/noBgProfile2.png';
 import reactLogo from '/public/reactLogo.svg';
 import angularLogo from '/public/angularLogo.svg';
 import nodejsLogo from '/public/nodejsLogo.svg';
@@ -37,18 +37,27 @@ export default function Home() {
             <motion.div initial={{ x: 1000, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
               <div className="row justify-content-center">
                 <div className="col-auto">
-                  <Image src={angularLogo} width={50} height={50} quality={100} alt="angularLogo"></Image>
+                  <h3>Main</h3>
                 </div>
                 <div className="col-auto">
-                  <Image src={nextJsLogo} width={50} height={50} quality={100} alt="nextjsLogo"></Image>
+                  <Image src={angularLogo} width={35} height={35} quality={100} alt="angularLogo"></Image>
                 </div>
-                <div className="col-auto">
-                  <Image src={reactLogo} width={50} height={50} quality={100} alt="reactLogo"></Image>
-                </div>
-                <div className="col-auto">
-                  <Image src={nodejsLogo} width={50} height={50} quality={100} alt="nodejsLogo"></Image>
-                </div>
+                
 
+              </div>
+              <div className="row justify-content-center">
+              <div className="col-auto">
+                  <h3>Others</h3>
+                </div>
+                <div className="col-auto">
+                  <Image src={nextJsLogo} width={35} height={35} quality={100} alt="nextjsLogo"></Image>
+                </div>
+                <div className="col-auto">
+                  <Image src={reactLogo} width={35} height={35} quality={100} alt="reactLogo"></Image>
+                </div>
+                <div className="col-auto">
+                  <Image src={nodejsLogo} width={35} height={35} quality={100} alt="nodejsLogo"></Image>
+                </div>
               </div>
 
 
