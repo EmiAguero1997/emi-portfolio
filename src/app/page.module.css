@@ -156,7 +156,7 @@ a.secondary {
   height: 100vh;
   overflow: hidden;
   z-index: -1; /* Keep behind all content */
-  background: none; /* Clear background to use pseudo-elements for animated bubbles */
+  background: linear-gradient(#0f3a4c,rgb(60, 83, 86))!important; /* Clear background to use pseudo-elements for animated bubbles */
 }
 
 .backgroundContainer::before,
