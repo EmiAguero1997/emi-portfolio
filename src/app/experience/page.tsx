@@ -69,7 +69,6 @@ export default function Experience() {
         'https://elegibiencompramejor.gob.ar/landing',
         'https://capacitur.sanjuan.tur.ar',
         'https://plataforma.sanjuan.tur.ar',
-        'https://sanjuanresponsable.sanjuan.gob.ar',
         'https://plataforma.sanjuan.tur.ar',
         'https://servicios.inversionessanjuan.gov.ar'
       ]
