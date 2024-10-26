@@ -6,7 +6,7 @@ import fotoCv from '/public/noBgProfile2.png';
 import reactLogo from '/public/reactLogo.svg';
 import angularLogo from '/public/angularLogo.svg';
 import nodejsLogo from '/public/nodejsLogo.svg';
-import nextJsLogo from '/public/nextJsLogo.svg';
+import nextJsLogo from '/public/nextjsLogo.svg';
 import linkedinLogo from '/public/linkedinLogo.svg';
 import downloadIcon from '/public/downloadIcon.svg';
 
