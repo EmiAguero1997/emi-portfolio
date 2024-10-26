@@ -1,8 +1,6 @@
 import * as motion from "framer-motion/client"
 import styles from "./page.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import AppNavbar from "./components/navbar";
-// import Image from 'react-bootstrap/Image';
 import Image from "next/image";
 import fotoCv from '/public/noBgProfile2.png';
 import reactLogo from '/public/reactLogo.svg';

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AppNavbar from "./components/navbar";
+import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './page.module.css';
 
@@ -38,6 +39,7 @@ export default function RootLayout({
       <div className={styles.backgroundContainer}></div>
         <AppNavbar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

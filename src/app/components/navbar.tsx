@@ -29,6 +29,7 @@ export default function AppNavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={() => goRoute('/experience')}>Experience</Nav.Link>
+            <Nav.Link onClick={() => goRoute('/contact')}>Contact</Nav.Link>
             {/* <NavDropdown title="Social Media" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
