@@ -188,6 +188,17 @@ a.secondary {
   z-index: 1000;
 }
 
+.navbar button{
+  border: 0px;
+  color: #7fffd4;
+}
+
+.navbar button:focus,
+.navbar button:active {
+  outline: none; /* Ensures no outline on focus */
+  box-shadow: none; /* Ensures no shadow on click */
+}
+
 .bigTitle{
   font-size: 50px;
 }

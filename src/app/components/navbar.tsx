@@ -4,46 +4,27 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import styles from '../page.module.css'
+import { useState } from 'react';
 
 
 export default function AppNavbar() {
+  const [expanded, setExpanded] = useState(false);
   const router = useRouter();
 
   const goRoute = (route: string) => {
+    setExpanded(false);
     router.push(route);
   }
   return (
-    //   <Navbar bg="dark" data-bs-theme="dark">
-    //   <Container>
-    //     <Navbar.Brand onClick={()=>goRoute('/')}>Emiliano</Navbar.Brand>
-    //     <Nav className="me-auto">
-    //       <Nav.Link onClick={()=>goRoute('/experience')}>Experience</Nav.Link>
-    //       <Nav.Link href="#features">Social Media</Nav.Link>
-    //     </Nav>
-    //   </Container>
-    // </Navbar>
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className={styles.navbar}>
+    <Navbar expand="lg" bg="dark" data-bs-theme="dark" className={styles.navbar} expanded={expanded}>
       <Container>
         <Navbar.Brand onClick={() => goRoute('/')}>Emiliano</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={()=>setExpanded(!expanded)} />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link onClick={() => goRoute('/experience')}>Experience</Nav.Link>
             <Nav.Link onClick={() => goRoute('/contact')}>Contact</Nav.Link>
-            {/* <NavDropdown title="Social Media" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
-            
-            
-            
+    
           </Nav>
         </Navbar.Collapse>
       </Container>
