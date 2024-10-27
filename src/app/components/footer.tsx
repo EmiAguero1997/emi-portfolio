@@ -9,7 +9,7 @@ export default function Footer(){
     return(
         <div className="container p-4">
             <div className="row justify-content-center g-3">
-            <div className={`col-auto align-content-center`}>
+            <div className={`col-12 align-content-center d-flex justify-content-center`}>
                 <span className={styles.authorName}>Made with</span>
             </div>
             <div className="col-auto">
