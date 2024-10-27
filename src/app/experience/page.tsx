@@ -31,6 +31,10 @@ export default function Experience() {
           description: 'I carried out redesigns and refactoring in the payments module of the application, handling highly complex code. These improvements optimized user interaction with the platform, increasing efficiency and user experience.'
         },
         {
+          name: 'Recharges module',
+          description:'I contributed to develop most part of recharges module, separating this feature from Payments module to achieve cleaner code and simple structure.'
+        },
+        {
           name: 'Migration of Travel Notifications Functionality',
           description: 'I participated in the development and migration of the travel notifications feature, enabling users to activate the use of their cards abroad, improving their experience.'
         }
