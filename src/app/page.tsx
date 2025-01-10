@@ -74,7 +74,7 @@ export default function Home() {
                 <motion.a
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
-                  href="/CV.pdf"
+                  href="/EA-CV-HV.pdf"
                   download="EA-CV.pdf"
                   className="btn btn-secondary btn-lg mt-4"
                 >
