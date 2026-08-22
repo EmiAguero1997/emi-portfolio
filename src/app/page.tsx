@@ -2,13 +2,6 @@ import * as motion from "framer-motion/client"
 import styles from "./page.module.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from "next/image";
-import fotoCv from '/public/noBgProfile2.png';
-import reactLogo from '/public/reactLogo.svg';
-import angularLogo from '/public/angularLogo.svg';
-import nodejsLogo from '/public/nodejsLogo.svg';
-import nextJsLogo from '/public/nextjsLogo.svg';
-import linkedinLogo from '/public/linkedinLogo.svg';
-import downloadIcon from '/public/downloadIcon.svg';
 
 export default function Home() {
   const linkedinUrl = 'https://www.linkedin.com/in/aguero-emiliano';
@@ -38,7 +31,7 @@ export default function Home() {
                   <h3>Main</h3>
                 </div>
                 <div className="col-auto">
-                  <Image src={angularLogo} width={35} height={35} quality={100} alt="angularLogo"></Image>
+                  <Image src="/angularLogo.svg" width={35} height={35} quality={100} alt="angularLogo"></Image>
                 </div>
                 
 
@@ -48,13 +41,13 @@ export default function Home() {
                   <h3>Others</h3>
                 </div>
                 <div className="col-auto">
-                  <Image src={nextJsLogo} width={35} height={35} quality={100} alt="nextjsLogo"></Image>
+                  <Image src="/nextjsLogo.svg" width={35} height={35} quality={100} alt="nextjsLogo"></Image>
                 </div>
                 <div className="col-auto">
-                  <Image src={reactLogo} width={35} height={35} quality={100} alt="reactLogo"></Image>
+                  <Image src="/reactLogo.svg" width={35} height={35} quality={100} alt="reactLogo"></Image>
                 </div>
                 <div className="col-auto">
-                  <Image src={nodejsLogo} width={35} height={35} quality={100} alt="nodejsLogo"></Image>
+                  <Image src="/nodejsLogo.svg" width={35} height={35} quality={100} alt="nodejsLogo"></Image>
                 </div>
               </div>
 
@@ -78,14 +71,14 @@ export default function Home() {
                   download="EA-CV.pdf"
                   className="btn btn-secondary btn-lg mt-4"
                 >
-                  Download CV <Image src={downloadIcon} width={25} height={25} alt="download"></Image>
+                  Download CV <Image src="/downloadIcon.svg" width={25} height={25} alt="download"></Image>
                 </motion.a>
               </div>
               <div className="col-auto">
                 <motion.div whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}>
                   <motion.a href={linkedinUrl} target="_blank">
-                    <Image src={linkedinLogo} width={50} height={50} alt="linkedinLogo" className="mt-4"></Image>
+                    <Image src="/linkedinLogo.svg" width={50} height={50} alt="linkedinLogo" className="mt-4"></Image>
                   </motion.a>
                 </motion.div>
 
@@ -109,7 +102,7 @@ export default function Home() {
 >
   <div className={styles.imageContainer}>
     <Image
-      src={fotoCv}
+      src="/noBgProfile2.png"
       className={styles.profileImg}
       priority
       width={350}

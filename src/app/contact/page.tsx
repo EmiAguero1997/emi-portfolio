@@ -1,7 +1,5 @@
 import styles from '../page.module.css';
 import * as motion from "framer-motion/client";
-import emailSvg from '/public/email.svg';
-import phoneSvg from '/public/phone.svg';
 import Image from "next/image";
 
 export default function Contact() {
@@ -27,7 +25,7 @@ export default function Contact() {
                         <div>
                         <div className="row">
                             <div className="col-2">
-                                <Image src={emailSvg} width={50} height={50} alt='email'></Image>
+                                <Image src="/email.svg" width={50} height={50} alt='email'></Image>
                             </div>
                             <div className="col-10">
                                 <h3>Email</h3>
@@ -36,7 +34,7 @@ export default function Contact() {
                         </div>
                         <div className="row mt-4">
                             <div className="col-2">
-                                <Image src={phoneSvg} width={50} height={50} alt='email'></Image>
+                                <Image src="/phone.svg" width={50} height={50} alt='email'></Image>
                             </div>
                             <div className="col-10">
                                 <h3>Phone</h3>
