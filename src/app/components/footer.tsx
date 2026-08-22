@@ -1,9 +1,5 @@
 import styles from '../page.module.css';
 import Image from 'next/image';
-import nextLogo from '/public/nextjsLogo.svg';
-import reactLogo from '/public/reactLogo.svg';
-import framerLogo from '/public/framer-motion.svg';
-import bootstrapLogo from '/public/bootstrap.svg';
 
 export default function Footer(){
     return(
@@ -13,16 +9,16 @@ export default function Footer(){
                 <span className={styles.authorName}>Made with</span>
             </div>
             <div className="col-auto">
-                <Image src={nextLogo} width={50} height={50} alt='nextLogo'></Image>
+                <Image src="/nextjsLogo.svg" width={50} height={50} alt='nextLogo'></Image>
             </div>
             <div className="col-auto">
-                <Image src={reactLogo} width={50} height={50} alt='nextLogo'></Image>
+                <Image src="/reactLogo.svg" width={50} height={50} alt='nextLogo'></Image>
             </div>
             <div className="col-auto">
-            <Image src={framerLogo} width={50} height={50} alt='nextLogo'></Image>
+            <Image src="/framer-motion.svg" width={50} height={50} alt='nextLogo'></Image>
             </div>
             <div className="col-auto">
-            <Image src={bootstrapLogo} width={50} height={50} alt='nextLogo'></Image>
+            <Image src="/bootstrap.svg" width={50} height={50} alt='nextLogo'></Image>
             </div>
         </div>
         </div>
